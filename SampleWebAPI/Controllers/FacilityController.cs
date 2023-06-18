@@ -1,5 +1,6 @@
 using Core;
 using Entities.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SampleWebAPI.Models;
 using SampleWebAPI.Models.Facility;
@@ -9,6 +10,7 @@ namespace SampleWebAPI.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    [Authorize]
     public class FacilityController : ControllerBase
     {
         private readonly ILogger<FacilityController> _logger;
